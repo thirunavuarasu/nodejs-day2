@@ -24,8 +24,9 @@ App.listen (PORT, () => {
 
      fs.writeFileSync(filepath, `${Today}`, 'utf8');
 
-     let data= fs.readFileSync (filepath, 'utf8');
+     
      try{
+       let data= fs.readFileSync (filepath, 'utf8');
         res.status(200).send(data);
      }catch(error){
         console.log(error);
